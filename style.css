@@ -1,0 +1,61 @@
+/* Cofman Law - Custom Styles */
+
+.hero-image {
+    background-image: linear-gradient(rgba(26, 54, 93, 0.7), rgba(26, 54, 93, 0.7)), url('https://images.unsplash.com/photo-1517502884422-41eaead166d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+    background-size: cover;
+    background-position: center;
+    animation: hero-zoom 12s ease-in-out forwards;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu {
+    transition: all 0.3s ease;
+}
+
+@keyframes fadein-up {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: none; }
+}
+.animate-fadein-up {
+    opacity: 0;
+    animation: fadein-up 1s cubic-bezier(.4,0,.2,1) forwards;
+}
+
+@keyframes fadein-scale {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+.animate-fadein-scale {
+    opacity: 0;
+    animation: fadein-scale 1s cubic-bezier(.4,0,.2,1) forwards;
+}
+
+/* Hero background slow zoom */
+.hero-image {
+    animation: hero-zoom 12s ease-in-out forwards;
+}
+@keyframes hero-zoom {
+    from { background-size: 100% 100%; }
+    to { background-size: 110% 110%; }
+}
+
+/* Hero text and button motion */
+.hero-headline {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadein-up 1s cubic-bezier(.4,0,.2,1) 0.2s forwards;
+}
+.hero-subheadline {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadein-up 1s cubic-bezier(.4,0,.2,1) 0.5s forwards;
+}
+.hero-cta {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadein-up 1s cubic-bezier(.4,0,.2,1) 0.8s forwards;
+} 

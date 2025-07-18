@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cofman Law</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a365d',
+                        secondary: '#2c5282',
+                        accent: '#4299e1',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans text-gray-800">
+    <!-- Sticky Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="index.html" class="text-2xl font-bold text-primary">Cofman Law</a>
+            </div>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-primary hover:text-accent font-medium">Home</a>
+                <a href="about.html" class="text-gray-600 hover:text-accent font-medium">About</a>
+                <a href="pricing.html" class="text-gray-600 hover:text-accent font-medium">Pricing</a>
+                <a href="contact.html" class="text-gray-600 hover:text-accent font-medium">Contact</a>
+                <a href="contact.html#contact-form" class="bg-accent hover:bg-secondary text-white px-4 py-2 rounded-md font-medium transition duration-300">Book a Free Consultation</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-primary focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu hidden md:hidden bg-white pb-4 px-4">
+            <a href="index.html" class="block py-2 text-primary font-medium">Home</a>
+            <a href="about.html" class="block py-2 text-gray-600 hover:text-accent">About</a>
+            <a href="pricing.html" class="block py-2 text-gray-600 hover:text-accent">Pricing</a>
+            <a href="contact.html" class="block py-2 text-gray-600 hover:text-accent">Contact</a>
+            <a href="contact.html#contact-form" class="block mt-2 bg-accent text-white px-4 py-2 rounded-md text-center font-medium">Book a Free Consultation</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-image text-white py-20 md:py-32">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 animate-fadein-up hero-headline">Practical Business Law. Clear Advice. Straightforward Pricing.</h1>
+                <p class="text-xl mb-8 hero-subheadline">Serving Austin entrepreneurs, startups, and small businesses with reliable legal guidance—without the big firm complexity.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 hero-cta">
+                    <a href="contact.html#contact-form" class="bg-accent hover:bg-secondary text-white px-6 py-3 rounded-md font-medium text-center transition duration-300">Book a Free Consultation</a>
+                    <a href="#services" class="bg-white hover:bg-gray-100 text-primary px-6 py-3 rounded-md font-medium text-center transition duration-300">View Services</a>
+                </div>
+            </div>
+            <div class="md:w-1/2">
+                <!-- Image is set as background in the hero section -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust/Intro Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-primary animate-fadein-up">Legal Support That Moves at the Speed of Business</h2>
+            <p class="text-xl text-center max-w-3xl mx-auto mb-12">At Cofman Law, we focus on helping small business owners and entrepreneurs make smart legal decisions from day one—whether you're forming an LLC, reviewing a contract, or need a fractional general counsel. We prioritize clarity, efficiency, and responsiveness.</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                    <div class="text-4xl text-accent mb-4">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Business Formation</h3>
+                    <p class="text-gray-600">LLCs, Corporations, Partnerships</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                    <div class="text-4xl text-accent mb-4">
+                        <i class="fas fa-file-signature"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Contracts & Negotiation</h3>
+                    <p class="text-gray-600">Drafting, review, and negotiation</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                    <div class="text-4xl text-accent mb-4">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Real Estate Law</h3>
+                    <p class="text-gray-600">Commercial leases & transactions</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                    <div class="text-4xl text-accent mb-4">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Virtual General Counsel</h3>
+                    <p class="text-gray-600">Fractional legal support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-primary">How We Can Help</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300 hover:scale-105 hover:shadow-xl">
+                    <div class="text-3xl text-accent mb-4">
+                        <i class="fas fa-chess-queen"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Entity Formation</h3>
+                    <p class="text-gray-600 mb-4">LLCs, Corporations, Operating Agreements tailored to your business needs with clear guidance on tax and liability implications.</p>
+                    <a href="#" class="text-accent font-medium hover:underline">Learn more →</a>
+                </div>
+                <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300 hover:scale-105 hover:shadow-xl">
+                    <div class="text-3xl text-accent mb-4">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Contract Drafting & Review</h3>
+                    <p class="text-gray-600 mb-4">NDAs, Services Agreements, Vendor Contracts that protect your interests while maintaining fair business relationships.</p>
+                    <a href="#" class="text-accent font-medium hover:underline">Learn more →</a>
+                </div>
+                <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300 hover:scale-105 hover:shadow-xl">
+                    <div class="text-3xl text-accent mb-4">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Real Estate & Leases</h3>
+                    <p class="text-gray-600 mb-4">Commercial lease review & negotiation to ensure favorable terms and avoid hidden pitfalls in your business location agreements.</p>
+                    <a href="#" class="text-accent font-medium hover:underline">Learn more →</a>
+                </div>
+                <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300 hover:scale-105 hover:shadow-xl">
+                    <div class="text-3xl text-accent mb-4">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Fractional In-House Counsel</h3>
+                    <p class="text-gray-600 mb-4">For startups and lean teams who need consistent legal guidance without the expense of a full-time general counsel.</p>
+                    <a href="#" class="text-accent font-medium hover:underline">Learn more →</a>
+                </div>
+                <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300 hover:scale-105 hover:shadow-xl">
+                    <div class="text-3xl text-accent mb-4">
+                        <i class="fas fa-chess"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Business Law Strategy</h3>
+                    <p class="text-gray-600 mb-4">Risk management, compliance, deal structuring to position your business for growth while minimizing legal exposure.</p>
+                    <a href="#" class="text-accent font-medium hover:underline">Learn more →</a>
+                </div>
+                <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300 hover:scale-105 hover:shadow-xl">
+                    <div class="text-3xl text-accent mb-4">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Startup Advisory</h3>
+                    <p class="text-gray-600 mb-4">Comprehensive legal support for startups from formation through funding rounds and beyond.</p>
+                    <a href="#" class="text-accent font-medium hover:underline">Learn more →</a>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="contact.html#contact-form" class="bg-primary hover:bg-secondary text-white px-6 py-3 rounded-md font-medium inline-block transition duration-300">View All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About the Firm -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/3 mb-8 md:mb-0 md:pr-8 flex flex-col items-center">
+                <img src="assets/profile.jpg" alt="Brett Cofman, Esq." class="rounded-xl shadow-lg border-4 border-white w-64 h-64 object-cover transition-transform duration-300 hover:scale-105 animate-fadein-scale">
+                <div class="mt-4 text-center">
+                    <span class="block text-lg font-semibold text-primary">Brett Cofman, Esq.</span>
+                    <span class="block text-sm text-gray-500">Founder, Cofman Law</span>
+                </div>
+            </div>
+            <div class="md:w-2/3">
+                <h2 class="text-3xl font-bold mb-6 text-primary">About The Firm</h2>
+                <p class="text-lg mb-6">Brett Cofman, Esq. brings 9+ years of legal experience across commercial law, tech, and real estate—plus an MBA from WashU. He's helped scale companies from startup to acquisition and now advises founders, owners, and investors on building legally sound businesses.</p>
+                <p class="text-lg mb-6">The Cofman Law was founded to provide practical, business-savvy legal counsel to entrepreneurs and small businesses who need responsive legal support without the overhead of large firm representation.</p>
+                <a href="about.html" class="text-accent font-medium hover:underline bg-white border border-accent px-4 py-2 rounded-md shadow-sm transition-transform duration-200 hover:scale-105 mt-2 inline-block">Read Full Bio →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-4xl mx-auto">
+                <p class="text-xl italic mb-8">"Brett made a complex contract feel simple. I trust him with all my business legal needs. His ability to explain legal concepts in plain business terms has been invaluable to our company's growth."</p>
+                <p class="font-semibold">— Former Client, Austin Tech Startup</p>
+                <div class="mt-8 flex flex-wrap justify-center items-center gap-6">
+                    <span class="text-sm font-medium">Licensed in Texas & Florida</span>
+                    <span class="text-sm font-medium">J.D./M.B.A. from Washington University in St. Louis</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Preview -->
+    <section class="py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4 text-primary">Simple, Transparent Rates</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">$150/hour — no surprises, no long retainers. Clear scope and timelines upfront for every engagement.</p>
+            <a href="pricing.html" class="bg-accent hover:bg-secondary text-white px-6 py-3 rounded-md font-medium inline-block transition duration-300">Learn More About Pricing</a>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4 text-primary">Need a Contract Reviewed? Starting a Business?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Get straightforward legal advice tailored to your business needs.</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="contact.html#contact-form" class="bg-primary hover:bg-secondary text-white px-6 py-3 rounded-md font-medium transition duration-300" aria-label="Book a Free Consultation">Book a Free Consultation</a>
+                <a href="contact.html#contact-form" class="bg-white hover:bg-gray-100 text-primary px-6 py-3 rounded-md font-medium border border-gray-300 transition duration-300" aria-label="Send a Quick Question">Send a Quick Question</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Cofman Law</h3>
+                    <p class="mb-4">Practical business law for entrepreneurs, startups, and small businesses in Austin and beyond.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contact Info</h4>
+                    <p class="flex items-center mb-2"><i class="fas fa-map-marker-alt mr-2"></i> Austin, Texas</p>
+                    <p class="flex items-center mb-2"><i class="fas fa-envelope mr-2"></i> brettcof@gmail.com</p>
+                    <p class="flex items-center"><i class="fas fa-phone mr-2"></i> (636) 751-8080</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="hover:text-accent">About</a></li>
+                        <li><a href="pricing.html" class="hover:text-accent">Pricing</a></li>
+                        <li><a href="contact.html" class="hover:text-accent">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-accent">Terms & Disclaimer</a></li>
+                        <li><a href="#" class="hover:text-accent">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Cofman Law. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Quick Question Modal -->
+    <div id="quickQuestionModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 hidden">
+      <div class="bg-white rounded-lg shadow-lg w-full max-w-md p-8 relative">
+        <button id="closeQuickQuestion" class="absolute top-2 right-2 text-gray-400 hover:text-gray-700 text-2xl">&times;</button>
+        <h2 class="text-2xl font-bold mb-4 text-primary">Send a Quick Question</h2>
+        <form id="quickQuestionForm" action="https://api.web3forms.com/submit" method="POST" class="space-y-4" novalidate>
+          <input type="hidden" name="access_key" value="74a3b05e-c567-4c56-8dcc-0ee2d40c72a2">
+          <input type="hidden" name="subject" value="Message from Cofman Law Website">
+          <input type="hidden" name="from_name" id="quickFromName">
+          <label for="quickName" class="block text-sm font-medium text-gray-700 mb-2">Your Name (optional)</label>
+          <input type="text" id="quickName" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent" placeholder="Your name (optional)">
+          <label for="quickQuestion" class="block text-sm font-medium text-gray-700 mb-2">Your Question<span class="text-red-500">*</span></label>
+          <textarea id="quickQuestion" name="question" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent" required placeholder="Type your question..."></textarea>
+          <p class="mt-1 text-red-500 text-sm hidden" id="quickQuestionError">Please enter your question.</p>
+          <button type="submit" class="w-full bg-primary hover:bg-secondary text-white py-3 px-6 rounded-md font-medium transition duration-300">Send</button>
+          <p class="mt-4 text-green-600 text-center text-lg hidden" id="quickQuestionSuccess">Thank you! Your question has been sent.</p>
+        </form>
+      </div>
+    </div>
+
+    <!-- Contact Form Success Modal -->
+    <div id="contactSuccessModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 hidden">
+      <div class="bg-white rounded-lg shadow-lg w-full max-w-md p-8 relative text-center">
+        <button id="closeContactSuccess" class="absolute top-2 right-2 text-gray-400 hover:text-gray-700 text-2xl">&times;</button>
+        <h2 class="text-2xl font-bold mb-4 text-primary">Thank you!</h2>
+        <p class="text-lg mb-4">Your message has been sent. We will get back to you soon.</p>
+      </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // Contact form validation and AJAX submission
+        const contactForm = document.getElementById('main-contact-form');
+        if (contactForm) {
+          const firstName = document.getElementById('firstName');
+          const lastName = document.getElementById('lastName');
+          const email = document.getElementById('email');
+          const service = document.getElementById('service');
+          const firstNameError = document.getElementById('firstNameError');
+          const emailError = document.getElementById('emailError');
+          const serviceError = document.getElementById('serviceError');
+          const successMessage = document.getElementById('successMessage'); // This will be replaced by the modal
+          const contactFromName = document.getElementById('contactFromName');
+          const contactSuccessModal = document.getElementById('contactSuccessModal');
+          const closeContactSuccess = document.getElementById('closeContactSuccess');
+
+          function validateEmail(emailValue) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailValue);
+          }
+
+          contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            let valid = true;
+            // First Name
+            if (!firstName.value.trim()) {
+              firstNameError.classList.remove('hidden');
+              valid = false;
+            } else {
+              firstNameError.classList.add('hidden');
+            }
+            // Last Name
+            if (lastName.value.trim() && lastName.value.trim().length < 2) {
+              // No specific error message for last name, just ensure it's not empty
+              valid = false;
+            }
+            // Email
+            if (!email.value.trim() || !validateEmail(email.value.trim())) {
+              emailError.classList.remove('hidden');
+              valid = false;
+            } else {
+              emailError.classList.add('hidden');
+            }
+            // Service
+            if (!service.value) {
+              serviceError.classList.remove('hidden');
+              valid = false;
+            } else {
+              serviceError.classList.add('hidden');
+            }
+            // Message
+            const message = document.getElementById('message').value.trim();
+            if (!message) {
+              // No specific error message for message, just ensure it's not empty
+              valid = false;
+            }
+            if (!valid) {
+              return false;
+            }
+            // Set from_name before AJAX submit
+            contactFromName.value = firstName.value + (lastName.value ? (' ' + lastName.value) : '');
+            // AJAX submit
+            const formData = new FormData(contactForm);
+            fetch('https://api.web3forms.com/submit', {
+              method: 'POST',
+              body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+              if (data.success) {
+                contactSuccessModal.classList.remove('hidden');
+                contactForm.reset();
+              } else {
+                // This case should ideally not be reached with the current Web3Forms setup,
+                // but as a fallback, you might want to show an error message.
+                // For now, we'll just close the modal on failure.
+                contactSuccessModal.classList.remove('hidden');
+                contactSuccessModal.textContent = 'There was an error. Please try again later.';
+              }
+            })
+            .catch(() => {
+              contactSuccessModal.classList.remove('hidden');
+              contactSuccessModal.textContent = 'There was an error. Please try again later.';
+            });
+          });
+        }
+        // Quick Question Modal logic
+        const quickQuestionModal = document.getElementById('quickQuestionModal');
+        const openQuickQuestionBtns = document.querySelectorAll('a,button');
+        const closeQuickQuestion = document.getElementById('closeQuickQuestion');
+        const quickQuestionForm = document.getElementById('quickQuestionForm');
+        const quickQuestion = document.getElementById('quickQuestion');
+        const quickQuestionError = document.getElementById('quickQuestionError');
+        const quickQuestionSuccess = document.getElementById('quickQuestionSuccess');
+        const quickName = document.getElementById('quickName');
+        const quickFromName = document.getElementById('quickFromName');
+
+        // Open modal on any 'Send a Quick Question' button click
+        openQuickQuestionBtns.forEach(btn => {
+          if (btn.textContent && btn.textContent.trim().toLowerCase() === 'send a quick question') {
+            btn.addEventListener('click', function(e) {
+              e.preventDefault();
+              quickQuestionModal.classList.remove('hidden');
+              quickQuestionSuccess.classList.add('hidden');
+              quickQuestion.value = '';
+              quickQuestionError.classList.add('hidden');
+              quickName.value = ''; // Clear quick name field
+            });
+          }
+        });
+        // Close modal
+        closeQuickQuestion.addEventListener('click', function() {
+          quickQuestionModal.classList.add('hidden');
+        });
+        window.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') quickQuestionModal.classList.add('hidden');
+        });
+        quickQuestionModal.addEventListener('click', function(e) {
+          if (e.target === quickQuestionModal) quickQuestionModal.classList.add('hidden');
+        });
+        // Form validation and AJAX submission for quick question
+        quickQuestionForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          if (!quickQuestion.value.trim()) {
+            quickQuestionError.classList.remove('hidden');
+            return false;
+          } else {
+            quickQuestionError.classList.add('hidden');
+          }
+          // Set from_name before AJAX submit
+          quickFromName.value = quickName.value;
+          // AJAX submit
+          const formData = new FormData(quickQuestionForm);
+          fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: formData
+          })
+          .then(response => response.json())
+          .then(data => {
+            if (data.success) {
+              quickQuestionSuccess.classList.remove('hidden');
+              quickQuestionForm.reset();
+              setTimeout(() => quickQuestionModal.classList.add('hidden'), 1500);
+            } else {
+              quickQuestionSuccess.classList.remove('hidden');
+              quickQuestionSuccess.textContent = 'There was an error. Please try again later.';
+            }
+          })
+          .catch(() => {
+            quickQuestionSuccess.classList.remove('hidden');
+            quickQuestionSuccess.textContent = 'There was an error. Please try again later.';
+          });
+        });
+
+        // Close contact success modal
+        closeContactSuccess.addEventListener('click', function() {
+          contactSuccessModal.classList.add('hidden');
+        });
+        window.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') contactSuccessModal.classList.add('hidden');
+        });
+        contactSuccessModal.addEventListener('click', function(e) {
+          if (e.target === contactSuccessModal) contactSuccessModal.classList.add('hidden');
+        });
+
+        // IntersectionObserver for fade-in/scale-in animations
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('animate-fadein-up-active');
+              entry.target.classList.remove('animate-fadein-up');
+              entry.target.classList.add('animate-fadein-scale-active');
+              entry.target.classList.remove('animate-fadein-scale');
+            }
+          });
+        }, { threshold: 0.2 });
+
+        document.querySelectorAll('.animate-fadein-up').forEach(el => observer.observe(el));
+        document.querySelectorAll('.animate-fadein-scale').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

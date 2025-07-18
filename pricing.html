@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing | The Cofman Law</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a365d',
+                        secondary: '#2c5282',
+                        accent: '#4299e1',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans text-gray-800">
+    <!-- Sticky Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="index.html" class="text-2xl font-bold text-primary">The Cofman Law</a>
+            </div>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-gray-600 hover:text-accent font-medium">Home</a>
+                <a href="about.html" class="text-gray-600 hover:text-accent font-medium">About</a>
+                <a href="pricing.html" class="text-primary hover:text-accent font-medium">Pricing</a>
+                <a href="contact.html" class="text-gray-600 hover:text-accent font-medium">Contact</a>
+                <a href="contact.html#contact-form" class="bg-accent hover:bg-secondary text-white px-4 py-2 rounded-md font-medium transition duration-300">Book a Free Consultation</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-primary focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu hidden md:hidden bg-white pb-4 px-4">
+            <a href="index.html" class="block py-2 text-gray-600 hover:text-accent">Home</a>
+            <a href="about.html" class="block py-2 text-gray-600 hover:text-accent">About</a>
+            <a href="pricing.html" class="block py-2 text-primary font-medium">Pricing</a>
+            <a href="contact.html" class="block py-2 text-gray-600 hover:text-accent">Contact</a>
+            <a href="contact.html#contact-form" class="block mt-2 bg-accent text-white px-4 py-2 rounded-md text-center font-medium">Book a Free Consultation</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-image text-white py-20 md:py-32">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Simple, Transparent Pricing</h1>
+            <p class="text-xl mb-8">Clear rates with no hidden fees or surprises</p>
+        </div>
+    </section>
+
+    <!-- Pricing Content -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4 text-primary">Our Rate Structure</h2>
+                <p class="text-xl text-gray-600">$150/hour — no surprises, no long retainers. Clear scope and timelines upfront for every engagement.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white p-8 rounded-lg shadow-md border border-gray-200">
+                    <div class="text-center mb-6">
+                        <div class="text-4xl text-accent mb-4">
+                            <i class="fas fa-file-contract"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Contract Review</h3>
+                        <p class="text-gray-600">Standard contract review and negotiation</p>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>Contract analysis</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>Risk assessment</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>Negotiation support</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>Revision recommendations</li>
+                    </ul>
+                    <div class="text-center">
+                        <p class="text-2xl font-bold text-primary mb-2">$150/hour</p>
+                        <p class="text-sm text-gray-600">Typical engagement: 2-4 hours</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-md border border-gray-200">
+                    <div class="text-center mb-6">
+                        <div class="text-4xl text-accent mb-4">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Business Formation</h3>
+                        <p class="text-gray-600">Complete entity formation services</p>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>Entity selection guidance</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>Formation documents</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>Operating agreements</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>Compliance guidance</li>
+                    </ul>
+                    <div class="text-center">
+                        <p class="text-2xl font-bold text-primary mb-2">$150/hour</p>
+                        <p class="text-sm text-gray-600">Typical engagement: 4-8 hours</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-md border border-gray-200">
+                    <div class="text-center mb-6">
+                        <div class="text-4xl text-accent mb-4">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">General Counsel</h3>
+                        <p class="text-gray-600">Fractional in-house legal support</p>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>Ongoing legal advice</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>Risk management</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>Compliance monitoring</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>Strategic planning</li>
+                    </ul>
+                    <div class="text-center">
+                        <p class="text-2xl font-bold text-primary mb-2">$150/hour</p>
+                        <p class="text-sm text-gray-600">Monthly retainer available</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-gray-50 p-8 rounded-lg">
+                <h3 class="text-2xl font-bold mb-4 text-primary text-center">What's Included</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-semibold mb-2">✓ No Hidden Fees</h4>
+                        <p class="text-gray-600">All costs are discussed upfront with clear estimates.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-2">✓ Responsive Communication</h4>
+                        <p class="text-gray-600">Quick responses to your questions and concerns.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-2">✓ Clear Documentation</h4>
+                        <p class="text-gray-600">All work is documented and explained in plain English.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-2">✓ Flexible Scheduling</h4>
+                        <p class="text-gray-600">Meetings and consultations scheduled around your availability.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4 text-primary">Ready to Get Started?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Book a free consultation to discuss your legal needs and get a clear estimate for your project.</p>
+            <a href="contact.html#contact-form" class="bg-primary hover:bg-secondary text-white px-6 py-3 rounded-md font-medium transition duration-300">Book a Free Consultation</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">The Cofman Law</h3>
+                    <p class="mb-4">Practical business law for entrepreneurs, startups, and small businesses in Austin and beyond.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contact Info</h4>
+                    <p class="flex items-center mb-2"><i class="fas fa-map-marker-alt mr-2"></i> Austin, Texas</p>
+                    <p class="flex items-center mb-2"><i class="fas fa-envelope mr-2"></i> brettcof@gmail.com</p>
+                    <p class="flex items-center"><i class="fas fa-phone mr-2"></i> (636) 751-8080</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="hover:text-accent">About</a></li>
+                        <li><a href="pricing.html" class="hover:text-accent">Pricing</a></li>
+                        <li><a href="contact.html" class="hover:text-accent">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-accent">Terms & Disclaimer</a></li>
+                        <li><a href="#" class="hover:text-accent">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 The Cofman Law. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
